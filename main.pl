@@ -10,18 +10,18 @@ package main
     }
 
     use constant TRUE => 1 ;
-    use constant Debug => TRUE ;
+    use constant Debug => 0 ;
     use constant CONTINUE => TRUE ;
 
-    use lib '../../code' ;
-    use lib '../../data' ;
+    use lib 'code' ;
+    use lib 'data' ;
     use lib '.' ;
 
     use WAP_V ;
 
 
     use Data::Dumper ;
-    print( Dumper( $WAP_V::self->{ name } ) ) ;
+    print( Dumper( $WAP_V::myself->{ name } ) ) ;
     
     print( "\n\n" ) ;
     

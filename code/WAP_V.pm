@@ -22,7 +22,7 @@ package WAP_V
    # -------------------------
    # DEFINE the $self property
    # -------------------------
-   our $self = new( 'name', __PACKAGE__ ) ;
+   our $myself = new( 'name', __PACKAGE__ ) ;
 
    # --------------------------
    # INSTANCE creation operator
@@ -35,7 +35,7 @@ package WAP_V
    {
         my $instance = { @_ } ;
         bless( $instance, __PACKAGE__ ) ;
-        return( $instance )
+        return( $instance ) ;
    }
    
    
@@ -47,7 +47,7 @@ package WAP_V
    
    sub get_instance()
    {
-        return( $self ) ;
+        return( $myself ) ;
    }
 
 }

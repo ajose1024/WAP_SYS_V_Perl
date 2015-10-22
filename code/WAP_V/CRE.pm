@@ -1,4 +1,4 @@
-package WAP_V::CRL
+package WAP_V::CRE
 {
    use strict ;
    no warnings ;
@@ -10,7 +10,7 @@ package WAP_V::CRL
 
    if( main::Debug == WAP_V::constants::TRUE )
    {
-        print( 'DEBUG: WAP_V::CRL module included' . "\n" ) ;
+        print( 'DEBUG: WAP_V::CRE module included' . "\n" ) ;
         print( 'DEBUG: ' . "\n" ) ;
         print( 'DEBUG: CWD: ' . Cwd::getcwd . "\n" ) ;
         print( 'DEBUG: ' . "\n" ) ;
