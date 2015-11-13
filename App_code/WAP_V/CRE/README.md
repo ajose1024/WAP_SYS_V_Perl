@@ -20,31 +20,31 @@ This section is composed of the following parts:
             *  ....
             * **Log-n**  --  _Log channel_ 'Log-n' definition and instancialization module
         * **code_runner**  -- This module implements the _code_runner_ execution layer, that abstracts from the underlying existing features
-            * **exception_handlers**  --  This module implements / defines _exception_handlers_ for exception's processing
-                * **ULS_exceptions**  --  
-                * **ULS_handlers**  --  
-            * **runtime_engine**  --
-                * **code_interrupts**  --  
-                * **code_scheduler**  --  
-                * **code_threads**  --  
-                * **code_processes**  --  
-                * **code_interpreters**  --  
-        * **error_handler**  --  
-            * **bootstrap**  --  
-                * **app_args**  --  
-                * **p_state**  --  
-                    * **p_session**  --  
-                        * **base_static_class**  --  
-                        * **base data_class**  --  
-                        * **base_std_class**  --  
-                * **static_config**  --  
-                * **toolbox**  --  
-                * **app_engines**  --
-                    * **app_engine_1**  --  
-                    * **app_engine_2**  --  
+            * **exception_handlers**  --  This module implements / defines _exception handlers_ for exception's processing
+                * **ULS_exceptions**  --  This module implements the functions to register ULS exceptions, each one defined in it's own file, automatically loaded if present in the right directory
+                * **ULS_handlers**  --  This module implements the functions to register ULS exception handlers, each one defined in it's own file, automatically loaded if present in the right directory
+            * **runtime_engine**  --  This module implements the interface with the _runtime engine_
+                * **code_interrupts**  --  This module implements the _code interrupts_ which are used for timing purpouses and multi processing
+                * **code_scheduler**  --  This module implements the _code scheduler_ (both for threads and processes)
+                * **code_threads**  --  This module implements the _thread's interface_ and the _code threads_
+                * **code_processes**  --  This module implements the _process interface_ and the _code processes_
+                * **code_interpreters**  --  This module implements the _generic interpreter interface_ and any specific _code interpreters_, with each one implemented in it's own file, automatically loaded if present in the right directory
+        * **error_handler**  --  This module implements the error handling infrastructure and _error frame_ data structures
+            * **bootstrap**  --  This module implements the _bootstrap_ code, which loads the modules presente in the appropriated directory
+                * **app_args**  --  This module implements the code to retrive any passed parameters, regardless the way the code was invoked, storing them in the appropriated data structures
+                * **p_state**  --  This module implements the _code state save/reload infrastructure
+                    * **p_session**  --  This module implements the _presentation session_ code
+                        * **base_static_class**  --  This module implements a base static class for subsequent use
+                        * **base data_class**  --  This module implements a base data container class for subsequent use
+                        * **base_std_class**  --  This module implements a base standard (instantiable) class for subsequent use
+                * **static_config**  --  This module implements the code to read, parse and decode the static configuration files
+                * **toolbox**  --  This module implements the _toolbox_ interface and initialize all _toolbox componentes_, loaded automatically from the appropriate directory
+                * **app_engines**  --  This module implements the interface and registration service for the existing 'app_engines', loaded automatically from the appropriated directory
+                    * **app-engine-1**  --  This module implements the **app-engine-1** interface code
+                    * **app-engine-2**  --  This module implements the **app-engine-2** interface code
                     *   ....
-                    * **app_engine_n**  --  
-                * **arg_parser**  --  
-            * **boot_loader**  --  
+                    * **app-engine-n**  --  This module implements the **app-engine-n** interface code
+                * **arg_parser**  --  This module implements the code to parse the passed arguments and determine, in other things, which _application_ was called
+            * **boot_loader**  --  This module implements the code to read the _application configuration file_ and to load and initialize all required modules / code to run the sellected _application_
 
  
